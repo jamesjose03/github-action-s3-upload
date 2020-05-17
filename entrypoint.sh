@@ -1,7 +1,5 @@
 #!/bin/sh
 
-set -e
-
 mkdir -p ~/.aws
 touch ~/.aws/credentials
 
