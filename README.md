@@ -1,12 +1,12 @@
 # github-action-s3-upload
 A Github action to upload to files to AWS S3
 
-##Guide to setup
+## Guide to setup
 
 ### Create a workflow file in your git repo
 Create a 'main.yml' file in your '.github/workflows' folder. A sample syntax is given below.
 
-'''
+```
 on: [push]
 
 jobs:
@@ -24,7 +24,7 @@ jobs:
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-'''
+```
 
 The above workflow file is run on each push to the git repo.
 Replace the 'TO_UPLOAD' with the name of the file or folder to upload.
@@ -35,4 +35,4 @@ Replace the 'TO_UPLOAD' with the name of the file or folder to upload.
 	- AWS_ACCESS_KEY_ID: The AWS access key ID
 	- AWS_SECRET_ACCESS_KEY: The aws access secret key
 
-###Note: Make sure that the AWS account you are using has the necessary S3 bucket permissions
+### Note: Make sure that the AWS account you are using has the necessary S3 bucket permissions
