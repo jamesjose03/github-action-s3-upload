@@ -5,4 +5,4 @@ RUN pip install --quiet awscli==1.18.61
 COPY entrypoint.sh /entrypoint.sh
 CMD chmod +x /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["sh", "/entrypoint.sh"]
