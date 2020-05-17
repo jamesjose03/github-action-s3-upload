@@ -25,7 +25,7 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 ```
 
-The above workflow file is run on each push to the git repo.
+The above workflow file is run on each push to the git repo. The environment variables can be given as Github secrets or directly entered in the main.yml file in workflows.
 
 ### Create Github secrets for the following:
 	- AWS_REGION: The AWS region of your s3 bucket
