@@ -4,7 +4,7 @@ A Github action to upload to files to AWS S3
 ## Guide to setup
 
 ### Create a workflow file in your git repo
-Create a 'main.yml' file in your '.github/workflows' folder. A sample syntax is given below.
+Create a `main.yml` file in your `.github/workflows` folder. A sample syntax is given below.
 
 ```
 on: [push]
@@ -27,7 +27,7 @@ jobs:
 ```
 
 The above workflow file is run on each push to the git repo.
-Replace the 'TO_UPLOAD' with the name of the file or folder to upload.
+Replace the `TO_UPLOAD` with the name of the file or folder to upload.
 
 ### Create Github secrets for the following:
 	- AWS_REGION: The AWS region of your s3 bucket
