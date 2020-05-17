@@ -1,5 +1,5 @@
 # github-action-s3-upload
-A Github action to upload to files to AWS S3
+A Github action to upload all files to the specified S3 bucket. [Using awscli s3 sync]
 
 ## Guide to setup
 
@@ -19,7 +19,6 @@ jobs:
     - name: Run s3 copy
       uses: rjmendus/github-action-s3-upload@master
       env:
-        TO_UPLOAD: ./file_to_upload.txt
         AWS_REGION: ${{ secrets.AWS_REGION }}
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -27,7 +26,6 @@ jobs:
 ```
 
 The above workflow file is run on each push to the git repo.
-Replace the `TO_UPLOAD` with the name of the file or folder to upload.
 
 ### Create Github secrets for the following:
 	- AWS_REGION: The AWS region of your s3 bucket
